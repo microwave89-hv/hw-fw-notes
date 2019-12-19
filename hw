@@ -1,0 +1,11 @@
+MacBook Pro Retina 15" Mid 2012 (Best configuration):
+  - Intel(R) Core 2.7 GHz Ivy Bridge (Sandy Bridge Micro Architecture) ==> i7-3820QM, likely BGA1224
+  - 768 GB SSD
+  - 16 GB RAM
+  
+A1398:
+  - CPU (CPU, NB (MCH & co)): Ivy Bridge (mobile)
+  - SB (PCH): Panther Point, QM77 (7 series, C216), w. Management Engine 8
+  
+- Intel(R) DSL3510L Thunderbolt controller?
+- Cypress Semiconductor CY8C24794-24L - a Programmable SoC
