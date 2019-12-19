@@ -1,4 +1,4 @@
-Unpack PKG in PKG: pkgutil --expand-full
+Unpack PKG in PKG (nested PKG): pkgutil --expand-full
 Find recursively in files: grep -r "PeiMain" .
 
 Disassemble unreal mode:
