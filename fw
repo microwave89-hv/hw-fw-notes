@@ -1,0 +1,41 @@
+Unpack PKG in PKG: pkgutil --expand-full
+Find recursively in files: grep -r "PeiMain" .
+
+Disassemble unreal mode:
+- Arch: i386
+- le
+- intel-mnemonic
+- Mode: i8086
+- addr16
+- data16
+
+PEI = pre efi initialization
+PEIM = PEI module
+PPI = PEIM to PEIM interface
+==> pre efi initialization module to pre efi initialization module interface
+
+MTRR mask = MAXPHYSADDR - (top_of_range - base_of_range)
+
+SMRR...
+mov rcx, 0x1f2
+rdmsr (base in EDX:EAX)
+
+mov rcx, 0x1f3
+rdmsr (mask in EDX:EAX)
+
+PCH (SB): SPIBAR, BIOS_CNTL (SMM_BWP, BLE, BIOSWE, (TSS))
+CPU (CPU & NB): MCHBAR, MSRs (SMRR, SMBASE)
+
+TSEGMB = TOLUD - STOLEN - TSEG
+GTT = graphics translation table?
+
+IMC = integrated memory controller
+
+SPI = serial peripheral interface
+
+PCI = peripheral component interconnect:
+- positive decode: device claims transaction if transaction within one of its BARs
+- subtractive decode: device claims if no other device claims irrespectively of transaction target address
+
+ME:
+GLUT = Global lookup table
