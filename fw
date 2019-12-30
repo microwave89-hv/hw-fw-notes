@@ -32,6 +32,9 @@ TSEGMB = TOLUD - STOLEN - TSEG
 GTT = graphics translation table?
 
 IMC = integrated memory controller
+MRC = Memory Reference Code
+QPI = QuickPath Interconnect
+IED = Intel Enhanced Debug?
 
 SPI = serial peripheral interface
 
