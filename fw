@@ -39,6 +39,11 @@ MRC = Memory Reference Code
 QPI = QuickPath Interconnect
 IED = Intel Enhanced Debug? (There is e.g. "IEDBASE")
 
+CRB = Customer Reference Board
+
+AP = Application Processor
+BSP = Bootstrap Processor
+
 SPI = serial peripheral interface
 
 PCI = peripheral component interconnect:
