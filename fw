@@ -25,6 +25,8 @@ rdmsr (base in EDX:EAX)
 mov rcx, 0x1f3
 rdmsr (mask in EDX:EAX)
 
+TSEG = Top Segment (== SMRAM?)
+
 STM = Secure Transfer Monitor
 MSEG = Monitor Segment
 
