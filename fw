@@ -3,7 +3,7 @@ Working on *nix:
 - Find recursively in files: grep -r "PeiMain" .
 - Mass download pages: wget --recursive --no-parent <url>
 
-Disassemble unreal mode:
+Online Disassemble unreal mode:
 - Arch: i386
 - le
 - intel-mnemonic
