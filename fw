@@ -1,5 +1,7 @@
-Unpack PKG in PKG (nested PKG): pkgutil --expand-full
-Find recursively in files: grep -r "PeiMain" .
+Working on *nix:
+- Unpack PKG in PKG (nested PKG): pkgutil --expand-full
+- Find recursively in files: grep -r "PeiMain" .
+- Mass download pages: wget --recursive --no-parent <url>
 
 Disassemble unreal mode:
 - Arch: i386
