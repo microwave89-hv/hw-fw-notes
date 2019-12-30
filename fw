@@ -25,6 +25,9 @@ rdmsr (base in EDX:EAX)
 mov rcx, 0x1f3
 rdmsr (mask in EDX:EAX)
 
+STM = Secure Transfer Monitor
+MSEG = Monitor Segment
+
 PCH (SB): SPIBAR, BIOS_CNTL (SMM_BWP, BLE, BIOSWE, (TSS))
 CPU (CPU & NB): MCHBAR, MSRs (SMRR, SMBASE)
 
@@ -34,7 +37,7 @@ SA = System Agent = Uncore (Related to or same as NB) (Resides in processor die)
 IMC = integrated memory controller
 MRC = Memory Reference Code
 QPI = QuickPath Interconnect
-IED = Intel Enhanced Debug? (There is "IEDBASE" as well)
+IED = Intel Enhanced Debug? (There is e.g. "IEDBASE")
 
 SPI = serial peripheral interface
 
