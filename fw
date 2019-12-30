@@ -1,4 +1,4 @@
-Working on *nix:
+When working on *nix:
 - Unpack PKG in PKG (nested PKG): pkgutil --expand-full
 - Find recursively in files: grep -r "PeiMain" .
 - Mass download pages: wget --recursive --no-parent <url>
@@ -30,11 +30,11 @@ CPU (CPU & NB): MCHBAR, MSRs (SMRR, SMBASE)
 
 TSEGMB = TOLUD - STOLEN - TSEG
 GTT = graphics translation table?
-
+SA = System Agent = Uncore (Related to or same as NB) (Resides in processor die)
 IMC = integrated memory controller
 MRC = Memory Reference Code
 QPI = QuickPath Interconnect
-IED = Intel Enhanced Debug?
+IED = Intel Enhanced Debug? (There is "IEDBASE" as well)
 
 SPI = serial peripheral interface
 
