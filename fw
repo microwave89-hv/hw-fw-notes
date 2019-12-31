@@ -30,9 +30,6 @@ TSEG = Top Segment (== SMRAM?)
 STM = Secure Transfer Monitor
 MSEG = Monitor Segment
 
-PCH (SB): SPIBAR, BIOS_CNTL (SMM_BWP, BLE, BIOSWE, (TSS))
-CPU (CPU & NB): MCHBAR, MSRs (SMRR, SMBASE)
-
 TSEGMB = TOLUD - STOLEN - TSEG
 GTT = graphics translation table?
 SA = System Agent = Uncore (Related to or same as NB) (Resides in processor die)
@@ -54,3 +51,8 @@ PCI = peripheral component interconnect:
 
 ME:
 GLUT = Global lookup table
+
+Whereis?:
+- SPIBAR, BIOS_CNTL (SMM_BWP, BLE, BIOSWE, (TSS)) ==> See PCH (SB) datasheets
+- MCHBAR, MSRs (SMRR, SMBASE), G_SMRAME, D_LCK & co. (!) ==> See CPU (CPU & NB (Uncore aka SA)) datasheets (though not for 2nd and 3nd gen Intel Core(R)?)
+- IEDBASE ==> ??
