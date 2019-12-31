@@ -53,6 +53,7 @@ ME:
 GLUT = Global lookup table
 
 Whereis?:
-- SPIBAR, BIOS_CNTL (SMM_BWP, BLE, BIOSWE, (TSS)) ==> See PCH (SB) datasheets
-- MCHBAR, MSRs (SMRR, SMBASE), G_SMRAME, D_LCK & co. (!) ==> See CPU (CPU & NB (Uncore aka SA)) datasheets (though not for 2nd and 3nd gen Intel Core(R)?)
+- SPIBAR, BIOS_CNTL (SMM_BWP, BLE, BIOSWE, (TSS)) ==> See datasheets of PCH (SB)
+- MSRs (SMRR, SMBASE, ) ==> See Intel SDMs
+- MCHBAR, G_SMRAME, D_LCK, & co. (!) ==> See datasheets of CPU (CPU & NB (Uncore aka SA)) (though not for 2nd and 3nd gen Intel Core(R)?)
 - IEDBASE ==> ??
