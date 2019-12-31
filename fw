@@ -18,7 +18,7 @@ PPI = PEIM to PEIM interface
 
 MTRR mask = MAXPHYSADDR - (top_of_range - base_of_range)
 
-SMRR...
+SMRR (IVB)...
 mov rcx, 0x1f2
 rdmsr (base in EDX:EAX)
 
