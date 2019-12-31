@@ -51,6 +51,8 @@ PCI = peripheral component interconnect:
 
 ME:
 GLUT = Global lookup table
+HECI = Host Embedded Controller Interface
+PECI = Platform Environment Control Interface
 
 Whereis?:
 - SPIBAR, BIOS_CNTL (SMM_BWP, BLE, BIOSWE, (TSS)) ==> See datasheets of PCH (SB)
