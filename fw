@@ -16,6 +16,8 @@ PEIM = PEI module
 PPI = PEIM to PEIM interface
 ==> pre efi initialization module to pre efi initialization module interface
 
+HII = Human Interface Infrastructure (>EFI 1.10!)
+
 MTRR mask = MAXPHYSADDR - (top_of_range - base_of_range)
 
 SMRR (IVB)...
