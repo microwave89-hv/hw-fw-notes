@@ -39,6 +39,7 @@ QPI = QuickPath Interconnect
 IED = Intel Enhanced Debug? (There is e.g. "IEDBASE")
 
 CRB = Customer Reference Board
+PFAT = Platform Firmware Armoring Technology ((C) AMI)
 
 AP = Application Processor
 BSP = Bootstrap Processor
