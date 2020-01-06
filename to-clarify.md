@@ -7,7 +7,7 @@ When was it introduced?
 
 Does it have any use nowadays?
 
-What does IEDRAM look like?
+How does IEDRAM look like?
 
 # DSC Structure
 What is the DSC structure @xoreaxeaxeax was sinkholing?
