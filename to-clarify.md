@@ -46,6 +46,8 @@ Would IVB & PPT be ready for it? Is it actively used on Macbook Pro 10,1?
 
 How does it relate to Ring -1?
 
+Where is MSEG supposed to reside?
+
 # What is TXT? (Trusted Execution * (* = Technology?))
 Does it relate to STM? To VMM? To SMM?
 
