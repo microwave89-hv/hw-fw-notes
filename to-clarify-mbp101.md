@@ -48,7 +48,7 @@ How does it relate to Ring -1?
 
 Where is MSEG supposed to reside?
 
-# What is TXT? (Trusted Execution * (* = Technology?))
+# What is TXT? (Trusted Execution ~~* (* =~~ Technology~~?))~~
 Does it relate to STM? To VMM? To SMM?
 
 What does mean "bits, lockable by TxT"?
