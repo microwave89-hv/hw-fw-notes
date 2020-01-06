@@ -39,10 +39,12 @@ How does it relate to Ring -1?
 # What is TXT? (Trusted Execution *(Technology?))
 Does it relate to STM? To VMM? To SMM?
 
-# Mapping Jargon
+# Mapping
 What is "reclaim"?
 
 Where is the IOMMU?
+
+Can PCI config space be accessed by mere "mov xcx, [desired address]"?
 
 # Sway
 Is there any situation in which -1 <= SMM?
