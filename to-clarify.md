@@ -70,11 +70,13 @@ How dangerous is the GbE FW?
 How dangerous is the ME on a MacBook Pro 10,1?
 
 # ME
-How is MESEG used?
+How is MESEG being used?
 
 Would MESEG be accessible from -2? Is it even worth it?
 
 Would it be possible for the MESEG to reside in DRAM < 0xffffffff?
+
+What does the pin strap do which goes to the SMC?
 
 # Current FW MBP101.00F6.B00
 Are all issues solved related to S3? IIRC there was one vuln which was only solvable by a new MacBook Pro?
@@ -84,3 +86,5 @@ Why does chipsec fail with regards to several flash protection features?
 What role do the misconfigured protections on some EFI vars play?
 
 SMM_BWP does exist on PPT but is not reported to be used. Why hasn't the FW been updated in light of Speed Racer?
+
+Why is the ME reported to be in MFG mode?
