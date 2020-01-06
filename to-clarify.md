@@ -88,3 +88,7 @@ What role do the misconfigured protections on some EFI vars play?
 SMM_BWP does exist on PPT but is not reported to be used. Why hasn't the FW been updated in light of Speed Racer?
 
 Why is the ME reported to be in MFG mode?
+
+What is roughly the percentage of Intel(R) Reference Code? EDK 1.10? edk2? Apple Inc. added value?
+
+Why can there be found at least 1 reference to Insyde(R)?
