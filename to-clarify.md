@@ -51,7 +51,7 @@ Where is MSEG supposed to reside?
 # What is TXT? (Trusted Execution * (* = Technology?))
 Does it relate to STM? To VMM? To SMM?
 
-What does mean "bits lockable by TxT"?
+What does mean "bits, lockable by TxT"?
 
 # Mapping
 What is "reclaim"?
