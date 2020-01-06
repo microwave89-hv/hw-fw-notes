@@ -96,3 +96,5 @@ What is roughly the percentage of Intel(R) Reference Code? EDK 1.10? edk2? Apple
 Why can there be found at least 1 reference to Insyde(R)?
 
 Does it use undocumented MSR's? Which? In which way?
+
+Please draw two memory maps, one from the host view, and one from DRAM view! Where does it not correlate to setup by MRC?
