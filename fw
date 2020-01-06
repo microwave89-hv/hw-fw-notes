@@ -38,10 +38,12 @@ SA = System Agent = Uncore (Related to or same as NB) (Resides in processor die)
 IMC = integrated memory controller
 MRC = Memory Reference Code
 QPI = QuickPath Interconnect
+CBO = Cache Box on the Uncore
 IED = Intel Enhanced Debug? (There is e.g. "IEDBASE")
+ITP = In-Target Probe
 
 CRB = Customer Reference Board
-PFAT = Platform Firmware Armoring Technology ((C) AMI)
+PFAT = Platform Firmware Armoring Technology ((C) AMI (and Intel..?))
 
 AP = Application Processor
 BSP = Bootstrap Processor
