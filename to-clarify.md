@@ -10,7 +10,7 @@ Does it have any use nowadays?
 What does IEDRAM look like?
 
 # DSC Structure
-What is the DSC structure @xoreaxeaxeax was talking about?
+What is the DSC structure @xoreaxeaxeax was sinkholing?
 
 How does it relate to the CPU State Save Map? To the full SMRAM?
 
