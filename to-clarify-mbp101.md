@@ -109,3 +109,5 @@ Please draw two memory maps, one from the host view, and one from DRAM view! Whe
 
 # SMM Security
 What was the timeline of attacks, and how were they mitigated?
+
+Boot Guard? PFAT? STM? TXT? Bios Guard?
