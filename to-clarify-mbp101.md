@@ -44,7 +44,7 @@ A: For handlers that employ paging it should be possible.
 What is handled in SMC and what in SMM?
 
 # STM
-~~Secure~~ Transfer Monitor or SM ~~*~~ _I_ Transfer Monitor?
+~~Secure~~ Transfer Monitor or SM ~~*~~ I Transfer Monitor?
 
 Would IVB & PPT be ready for it? Is it actively used on Macbook Pro 10,1?
 
