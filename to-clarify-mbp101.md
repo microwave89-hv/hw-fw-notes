@@ -32,19 +32,19 @@ How does SMBASE relate to TSEG? To TSEGMB? Is it possible that SMBASE != TSEGMB 
 # SMI
 Is the MMU capable of accessing paging structures in SMRAM? While CPU is in SMM?
 
-_Broadwell Technology is supposedly capable of this. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, p. 8, p. 12)_
+A: Broadwell Technology is supposedly capable of this. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, p. 8, p. 12)
 
 Would x86-64 handlers be possible? Do such handlers currently exist in SMRAM?
 
 Would it be possible for such handlers to access DRAM up to TOM?
 
-_For handlers that employ paging it should be possible._
+A: For handlers that employ paging it should be possible.
 
 # SMC
 What is handled in SMC and what in SMM?
 
 # STM
-~~Secure~~ Transfer Monitor or SM ~~*~~ I Transfer Monitor?
+~~Secure~~ Transfer Monitor or SM ~~*~~ _I_ Transfer Monitor?
 
 Would IVB & PPT be ready for it? Is it actively used on Macbook Pro 10,1?
 
@@ -52,8 +52,12 @@ How does it relate to Ring -1?
 
 Where is MSEG supposed to reside?
 
+A: MSEG resides in the Top of TSEG. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, p. 11)
+
 # What is TXT? (Trusted Execution ~~* (* =~~ Technology ~~?)~~)
 Does it relate to STM? To VMM? To SMM?
+
+A: It is a technology for measured launch, whose promises don't depend on the integrity of previously launched SW, or FW. When using STM, it virtualizes the SMI handler. The STM is executed with SMM rights, and resides in SMRAM. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, pp. 8-9)
 
 What does mean "bits, lockable by TxT"?
 
