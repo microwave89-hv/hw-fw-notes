@@ -111,3 +111,28 @@ Please draw two memory maps, one from the host view, and one from DRAM view! Whe
 What was the timeline of attacks, and how were they mitigated?
 
 Boot Guard? PFAT? STM? TXT? Bios Guard?
+
+# FW Structures
+What does the EFI CAPSULE "MBP101_00F6_B00.scap" consist of?
+
+What does an FW Volume contain? Where are they in a CAPSULE? In the SPI ROM dump?
+
+What is an FFS and where are such in a CAPSULE? In the SPI ROM dump?
+
+Where in the CAPSULE is GbE FW? ME FW? BIOS + reset vector?
+
+Where in the SPI ROM dump is GbE FW? ME FW? BIOS + reset vector?
+
+# Reproducibility of SW-based SPI ROM Dumps
+How do the ROM contents change between two normal boots?
+
+What parts do change?
+
+How does it change upon altering the keyboard lighting or further Macbook Pro features between two reboots?
+
+Does it change upon invoking legacy media? What?
+
+# Reproducibility of HW-based SPI ROM Readings
+How do these unfettered readings compare to SW-based dumps?
+
+Any unexplainable differences that might pinpoint BIOS malware? ;) 
