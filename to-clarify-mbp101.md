@@ -88,6 +88,8 @@ Would it be possible for the MESEG to reside in DRAM < 0xffffffff?
 
 What does the pin strap do which goes to the SMC?
 
+What is the minimum of (ME) FW or HW straps to exist for the ME to not reset the platform after 30(?) min?
+
 # Current FW MBP101.00F6.B00
 Are all issues solved related to S3? IIRC there was one vuln which was only solvable by a new MacBook Pro?
 
