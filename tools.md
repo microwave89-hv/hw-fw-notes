@@ -17,7 +17,7 @@ https://web.archive.org/web/20191230150836/https://gitgud.io/sapp4ire/lnsider_Bl
 
 4. Choose one of the contained PKG's and browse into it until you find "<some-thing>.smc" along with the "SmcFlasher.efi". "SmcFlasher.efi" is the renamed, full-blown "SmcUtil.efi".
   
-5. Before copying it into an EFI partition be sure to check the hash using e.g. virustotal.com _and to read "Caveat".
+5. Before copying it into an EFI partition be sure to check the hash using e.g. virustotal.com _and to read "Caveat"_.
 
 Explanation: According to Alex Ionescu, in his talk https://www.youtube.com/watch?v=nSqpinjjgmg, today's SmcFlasher.efi is a stripped-down version of the original SmcUtil.efi. So when messing with the SMC, you want to make sure you have the full-blown tool at your hands.
 
