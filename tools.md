@@ -6,3 +6,7 @@ https://gitgud.io/sapp4ire/lnsider_Bl0S_TooIs/repository/master/archive.zip
 https://web.archive.org/web/20191230150836/https://gitgud.io/sapp4ire/lnsider_Bl0S_TooIs/repository/master/archive.zip
 
 (Pathetic attempt to remove tools after release: https://github.com/github/dmca/blob/master/2019/05/2019-05-02-Insyde.md)
+
+# "old" SmcUtil:
+
+https://web.archive.org/web/20200119132710/https://updates.cdn-apple.com/2019/cert/041-88046-20191011-2661ddb2-00fc-4279-862c-13b2aeec4a88/MacBookProSMCUpdate.dmg
