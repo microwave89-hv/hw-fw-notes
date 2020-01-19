@@ -15,7 +15,7 @@ https://web.archive.org/web/20191230150836/https://gitgud.io/sapp4ire/lnsider_Bl
 
 3. Extract the PKG using e.g. "pkgutil --expand-full ./MacBookProSMCUpdate.pkg ./MacBookProSMCUpdate.pkg/extracted/"
 
-4. Browse into any of the contained PKG's util you find <some-thing>.smc along with the SmcFlasher.efi. SmcFlasher.efi is the renamed, full-blown SmcUtil.efi.
+4. Choose one of the contained PKG's and browse into it until you find "<some-thing>.smc" along with the "SmcFlasher.efi". "SmcFlasher.efi" is the renamed, full-blown "SmcUtil.efi".
   
 5. Before copying it into an EFI partition be sure to check the hash using e.g. virustotal.com.
 
