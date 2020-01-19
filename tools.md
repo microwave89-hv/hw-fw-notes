@@ -25,3 +25,7 @@ The DMG behind the webarchive link was obtained by performing the following brow
 
 - www.apple.com ==> (In the top bar) "Support" ==> (scroll all the way down until bottom) "Downloads & Updates"
 - https://support.apple.com/en_US/downloads ==> (in search field enter "smc") "MacBook Pro SMC Firmware Update 1.7" ==> "Download"
+
+Caveat: You cannot use the "SmcUtil.efi" as is, since you must supply command line parameters to make use of it, and you must be able to load an EFI Fat binary. At the moment I cannot think of a simple way of doing so. You cannot use the EFI shell since it doesn't let you open Fat binaries, at least not from the command line. The reason for that is because EFI shell checks for the MZ magic at the beginning of the file header. Fat binaries don't employ the MZ magic at beginning of the file.
+
+Hence, from the Fat binary you must somehow carve out that SmcUtil.efi which is suitable for your architecture. See http://refit.sourceforge.net/info/fat_binary.html for information on EFI Fat binaries. Now you should be able to use the SmcUtil in EFI shell as usual.
