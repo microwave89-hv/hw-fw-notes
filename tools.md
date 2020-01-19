@@ -21,7 +21,7 @@ https://web.archive.org/web/20191230150836/https://gitgud.io/sapp4ire/lnsider_Bl
 
 Explanation: According to Alex Ionescu, in his talk https://www.youtube.com/watch?v=nSqpinjjgmg, today's SmcFlasher.efi is a stripped-down version of the original SmcUtil.efi. So when messing with the SMC, you want to make sure you have the full-blown tool at your hands.
 
-The DMG behind the webarchive link was obtained by performing the following browse sequence.
+The DMG behind the webarchive link was obtained by performing the following browse sequence at January 19, 2020 at roughly 12Z.
 
 - www.apple.com ==> (In the top bar) "Support" ==> (scroll all the way down until bottom) "Downloads & Updates"
 - https://support.apple.com/en_US/downloads ==> (in search field enter "smc") "MacBook Pro SMC Firmware Update 1.7" ==> "Download"
