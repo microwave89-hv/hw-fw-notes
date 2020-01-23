@@ -61,6 +61,8 @@ A: It is a technology for measured launch, whose promises don't depend on the in
 
 What does mean "bits, lockable by TxT"?
 
+(What does mean "bits, lockable by LT"? What is LT?)
+
 # Mapping
 What is "reclaim"?
 
