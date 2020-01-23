@@ -42,6 +42,9 @@ CBO = Cache Box on the Uncore
 IED = Intel Enhanced Debug? (There is e.g. "IEDBASE")
 ITP = In-Target Probe
 
+DMI = Direct Media Interface, (bus P/ICH <===> CPU)
+MDA = Monochrome Display Adapter
+
 CRB = Customer Reference Board
 PFAT = Platform Firmware Armoring Technology ((C) AMI (and Intel..?))
 
