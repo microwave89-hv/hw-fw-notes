@@ -34,5 +34,5 @@
 
 This appears to match the information written in the "Mobile 4th Generation Intel® CoreTM
 Processor Family, Mobile Intel® Pentium® Processor Family, and Mobile Intel® Celeron® Processor
-Family" (328902-002) despite being from a 3rd-gen CPU which at that is supposed to have a
+Family" (328902-002) datasheet despite being from a 3rd-gen CPU which at that is supposed to have a
 different micro-architecture.
