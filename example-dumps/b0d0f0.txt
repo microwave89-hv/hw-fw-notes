@@ -36,3 +36,52 @@ This appears to match the information written in the "Mobile 4th Generation Inte
 Processor Family, Mobile Intel® Pentium® Processor Family, and Mobile Intel® Celeron® Processor
 Family" (328902-002) datasheet despite being from a 3rd-gen CPU which at that employs a
 different micro-architecture.
+
+Extracted:
+
+3f00000000
+
+3ff000001 01 00 00 FF 03 00 00 00
+
+      0 0 0 0 0
+
+
+
+01 00 50 6F 04 00 00 00
+
+46f500001
+
+46f500000
+
+46f6 00000  01 00 60 6F 04 00 00 00
+
+remapbase: 3ff000000, locked
+remaplimit: 0x46f500000, locked
+
+tom: 0x400000000, locked
+
+touud: 0x46f600000, locked
+
+bdsm: 0x8ba00000, not locked!
+
+bgsm: 0x8b800000, locked
+
+tsegmb: 0x8b000000, locked
+
+tolud: 0x8fa00000, locked
+
+dmibar: 0xfed18000, enabled
+
+PCIEXBAR: 0xe0000000, 256MiB, enabled
+
+mchbar: 0xfed10000, enabled
+
+pxpepbar: 0xfed19000, enabled
+
+smramc: 0x1A ==> 11010b ==> 010b | G_SMRAME, D_LCK
+
+meseg base: 0x3ff000000
+
+meseg limit: 7fff000c00 ==>  0000 0000 00001100 00000000b  ==> 0x7fff0 | 1111b ==> 1MB, 0x7fff0 | 1110b ==> 2MiB, 0x7fff0 | 1100b ==> 4 MiB, 0x7fff0 | 1000b ==> 8 MiB, 0x7fff0 ==> 16 MiB
+
+meseg limit: 0x7fff000c00 ==> size = 16 MiB, enabled, meseg base + meseg limit locked
