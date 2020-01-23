@@ -70,7 +70,19 @@ Where is the IOMMU?
 
 Can PCI config space be accessed by a mere "mov xcx, [desired address]"?
 
+A: According to the original PCI spec, the config space can only be read by 0xcf8/0xcfc config cycles.
+There is however, the PCI-E spec which introduces the memory-mapped PCI configuration.
+With the *MBP101.00F6.B00*-FW, the configuration space starts at memory address 0xe0000000 and is
+pointed to by the PCIEXBAR register.
+This includes some (all?) config spaces of the old PCI devices.
+For instance, the "old" config space of B/D/F 0/0/0 can be read for example by typing "mem 0xe0000000" in the EFI Shell.
+Hence, odds are that the new configuration space and thus the old too, can be accessed by a mere "mov xcx, [desired address]".
+
 If SMRAM is open, can it be accessed by MacPmem? By fmem? "mov xcx, [desired address]"?
+
+A: As TSEG usually (always?) resides in "Low Usable DRAM" it should at least be readable in unreal mode by raw memory dereference.
+It seems that there must exist a page mapping to access it from long mode. In EFI Shell there is a transparent mapping so it might be readable from there. EFI Shell doesn't honor the memory map and as such attempts to read even reserved regions (though the machine sometimes hangs/crashes when doing this). As long as the MacPmem or fmem modules don't honor the memory map the BIOS has handed over to the OS, the SMRAM should technically be accessible. Put in other words, if even the PCI-E config space is readable which is not even a DRAM access, why shouldn't then the TSEG be accessible, itself residing in perfectly "true" DRAM?
+
 
 # Sway
 Is there any situation in which -1 <= SMM?
@@ -78,6 +90,8 @@ Is there any situation in which -1 <= SMM?
 Does the SMC play any noticeable role? Would it be possible?
 
 How dangerous is the GbE FW?
+
+A: A first analysis has shown that at least in the MBP101.00F6.B00 there doesn't appear to be GbE FW in the first place.
 
 How dangerous is the ME on a MacBook Pro 10,1?
 
