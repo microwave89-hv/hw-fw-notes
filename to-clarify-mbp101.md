@@ -125,6 +125,10 @@ Does it use undocumented MSR's? Which? In which way?
 
 Please draw two memory maps, one from the host view, and one from DRAM view! Where does it not correlate to setup by MRC?
 
+Which version of the ACPI Specification is used?
+
+A: In the (first) FADT (FACP) referenced from the XSDT there is a "4" at offset 8. So most likely the proper spec is https://uefi.org/sites/default/files/resources/ACPI_4_Errata_A.pdf, or https://uefi.org/sites/default/files/resources/ACPI_4.pdf. What's a little funny though, the "AppleACPIPlatform" kext appears to be derived from at least ACPI 6.0. This would mean the OS driver might demand features which the underlying platform FW doesn't support.
+
 # SMM Security
 What was the timeline of attacks, and how were they mitigated?
 
