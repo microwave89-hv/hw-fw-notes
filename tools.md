@@ -42,3 +42,8 @@ Load using "sudo kextload /Library/StagedExtensions/Users/micelwhave/Downloads/r
 Disable honoring EFI memory map using "sudo sysctl -w kern.pmem_allow_unsafe_operations=1"
 
 Dump n pages starting at page offset m using "sudo dd if=/dev/pmem of=/Users/micelwhave/minidump.dmp bs=4096 skip=m count=n"
+
+CAVEAT: Apparently, reading entire pages from PCI space leads to wrongly dumped register values. Thus dump b0 d0 f0 like this:
+```
+sudo dd if=/dev/pmem of=/Users/micelwhave/0xe0000000.dmp bs=4 skip=$((0xe0000000/4)) count=1024
+```
