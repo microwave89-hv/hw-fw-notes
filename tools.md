@@ -33,8 +33,12 @@ Caveat: You cannot use the "SmcUtil.efi" as is, since you must supply command li
 Hence, from the Fat binary you must somehow carve out that SmcUtil.efi which is suitable to your architecture. See http://refit.sourceforge.net/info/fat_binary.html for information on EFI Fat binaries. I did the carving manually using HexFiend hex editor. After carving the bytes, dumping them to a new file, and renaming that new file to BOOTX64.EFI you should be able to use the SmcUtil in EFI shell as usual. Once again, you are recommended to check the target file with virustotal.com.
 
 # MacPmem
+Get from (TBD)
+
+Install using (TBD)
+
 Load using "sudo kextload /Library/StagedExtensions/Users/micelwhave/Downloads/roootfolder/osxpmem.app/MacPmem.kext/"
 
 Disable honoring EFI memory map using "sudo sysctl -w kern.pmem_allow_unsafe_operations=1"
 
-Dump n pages starting at pageoffset m using "sudo dd if=/dev/pmem of=/Users/micelwhave/minidump.dmp bs=4096 skip=m count=n"
+Dump n pages starting at page offset m using "sudo dd if=/dev/pmem of=/Users/micelwhave/minidump.dmp bs=4096 skip=m count=n"
