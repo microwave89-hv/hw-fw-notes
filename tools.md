@@ -39,7 +39,7 @@ Install using (TBD)
 
 Load using "sudo kextload /Library/StagedExtensions/Users/micelwhave/Downloads/roootfolder/osxpmem.app/MacPmem.kext/"
 
-Disable honoring EFI memory map using "sudo sysctl -w kern.pmem_allow_unsafe_operations=1"
+Disable honoring EFI memory map using "sudo sysctl -w kern.pmem_allow_unsafe_operations=1" (this has to be redone each time that extension is loaded).
 
 Dump n pages starting at page offset m using "sudo dd if=/dev/pmem of=/Users/micelwhave/minidump.dmp bs=4096 skip=m count=n"
 
