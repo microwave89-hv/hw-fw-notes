@@ -109,7 +109,7 @@ Overwrite at maximum the last 0x100000 bytes of *VBoxEFI64.fd* with your payload
 
 Overwrite the first instruction at 0x1ffff0 (later mapped to 0xfffffff0 "Reset Vector") with 0xf4 (that is, a halt).
 
-If you overwrote an instruction that was multiple bytes long pad the remaining bytes with 0x90.
+If you overwrote an instruction that was multiple bytes long pad the remaining bytes of that instruction with 0x90s.
 
 Run the VM you created before by issuing following command:
 
