@@ -47,3 +47,64 @@ CAVEAT: Apparently, reading entire pages from PCI space leads to wrongly dumped 
 ```
 sudo dd if=/dev/pmem of=/Users/micelwhave/0xe0000000.dmp bs=4 skip=$((0xe0000000/4)) count=1024
 ```
+
+# Quick And Dirty Bare-metal x86 Emulator
+Install VBox 6.0
+
+Create new VM in Expert Mode:
+
+> *Microsoft Windows*
+
+> *Windows 7 (64-bit)*
+
+> RAM: *4096 MB*
+
+> *Create a virtual hard disk now*
+
+> Disk: *1024.00 MB*
+
+> *VDI*
+
+> *Fixed size*
+
+Customize **System**, **Motherboard**
+
+> Chipset: *ICH9*
+
+> Extended Features: Check *IO APIC* and *EFI*, Uncheck *Hardware Clock in UTC Time*
+
+Customize **System**, **Processor**
+
+> Processor(s): *1 CPU*
+
+> Extended Features: Uncheck *Enable PAE/NX* and *Enable Nested VT-x/AMD-V*
+
+Customize **System**, **Acceleration**
+
+> Paravirtualization Interface: None
+
+> Hardware Virtualization: Uncheck *Enable Nested Paging*
+
+Customize **Display, Screen**
+
+> Video Memory: *64 MB*
+
+> Graphics Controller: *VBoxVGA*
+
+> Acceleration: Uncheck *Enable 3D Acceleration* and *Enable 2D Video Acceleration*
+
+Customize **Storage**
+
+> Remove the *Empty* optical drive and confirm its removal
+
+> Uncheck *Use Host I/O Cache*
+
+Run the VM to make sure the UEFI Shell does come up properly
+
+Backup the ROM image */Applications/VirtualBox.app/Contents/MacOS/VBoxEFI64.fd*
+
+Create (empty) Windows 7 x64 VM
+
+Set DRAM to 4GiB
+
+Set V
