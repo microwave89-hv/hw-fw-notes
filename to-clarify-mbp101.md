@@ -166,4 +166,4 @@ A: BOOTLOG appears to be created by the SlingShot service/driver/app, which for 
 Sample output might read:
 > SlingShot: Starting Local and Network Diags/Recovery Session at 01/27/2020  18:22.
 
-What is "Merlin" in the Intel Reference Code of the SEC phase?
+What is "Merlin" in the Intel(R) Reference Code of the SEC phase?
