@@ -99,31 +99,31 @@ Customize **Storage**
 
 > Uncheck *Use Host I/O Cache*
 
-Run the VM to make sure the UEFI Shell does come up properly
+Run the VM to make sure the UEFI Shell does come up properly.
 
-Backup the ROM image */Applications/VirtualBox.app/Contents/MacOS/VBoxEFI64.fd*, enter your sudo PW when asked
+Backup the ROM image */Applications/VirtualBox.app/Contents/MacOS/VBoxEFI64.fd*, enter your sudo PW when asked.
 
-Overwrite at maximum the last 0x100000 bytes of *VBoxEFI64.fd* with your payload, e.g. with the last 0x100000 bytes of your machine's SPI ROM dump
+Overwrite at maximum the last 0x100000 bytes of *VBoxEFI64.fd* with your payload, e.g. with the last 0x100000 bytes of your machine's SPI ROM dump.
 
-Overwrite the first instruction at 0x1ffff0 (later mapped to 0xfffffff0 "Reset Vector") with 0xf4 (that is, halt)
+Overwrite the first instruction at 0x1ffff0 (later mapped to 0xfffffff0 "Reset Vector") with 0xf4 (that is, a halt).
 
-If you overwrote an instruction that was multiple bytes long pad the remaining bytes with 0x90
+If you overwrote an instruction that was multiple bytes long pad the remaining bytes with 0x90.
 
 Run the VM you created before by issuing following command:
 
 ```
 /Applications/VirtualBox.app/Contents/MacOS/VBoxManage startvm "<your VM>" -E VBOX_GUI_DBG_AUTO_SHOW=true -E VBOX_GUI_DBG_ENABLED=true
 ```
-Activate the machine window and goto *Machine* ==> *Pause* which unpauses the VM
+Activate the machine window and goto *Machine* ==> *Pause* which unpauses the VM.
 
-In the debugger window write *stop* to halt execution
+In the debugger window write *stop* to halt execution.
 
-Now start typing *t* several times to single-step your x86 code
+Now start typing *t* several times to single-step your x86 code.
 
-After your code started using a GDT you may type *dg* to display it
+After your code started using a GDT you may type *dg* to display it.
 
 CAVEATS:
 
 You may encounter the error "". For me it didn't seem to do any harm to the execution flow. It used to disappear after switching to 32-bit protected mode.
 
-For me, breakpoints didn't work. The reason might be that the CPU obviously isn't configured at all at the reset vector...
+For me, breakpoints didn't work. The reason might be that the CPU obviously isn't configured at all upon starting execution at the reset vector...
