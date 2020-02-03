@@ -74,7 +74,7 @@ A: According to the original PCI spec, the config space can only be read by 0xcf
 There is however, the PCI-E spec which introduces the memory-mapped PCI configuration.
 With the *MBP101.00F6.B00*-FW, the configuration space starts at memory address 0xe0000000, and it is
 pointed to by the PCIEXBAR register.
-This includes some (all?) config spaces of the old PCI devices.
+The range from 0xe0000000 includes some (all?) config spaces of the old PCI devices.
 For instance, the "old" config space of B/D/F 0/0/0 can be read by simply typing "mem 0xe0000000" in the EFI Shell.
 Hence, odds are that the new configuration space and thus the old too, can be accessed by a mere "mov xcx, [desired address]".
 
