@@ -118,8 +118,12 @@ Activate the machine window and goto *Machine* ==> *Pause* which unpauses the VM
 
 In the debugger window write *stop* to halt execution
 
-Now type *t* to step by step follow your code
+Now start typing *t* several times to single-step your x86 code
 
-After your code has started using a GDT you may type *dg* to display it
+After your code started using a GDT you may type *dg* to display it
 
-CAVEAT: You may encounter the error "". For me it didn't seem to do any harm to the execution flow. It used to disappear after switching to 32-bit protected mode.
+CAVEATS:
+
+You may encounter the error "". For me it didn't seem to do any harm to the execution flow. It used to disappear after switching to 32-bit protected mode.
+
+For me, breakpoints didn't work. The reason might be that the CPU obviously isn't configured at all at the reset vector...
