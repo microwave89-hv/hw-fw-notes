@@ -124,6 +124,10 @@ After your code started using a GDT you may type *dg* to display it.
 
 CAVEATS:
 
-You may encounter the error "". For me it didn't seem to do any harm to the execution flow. It used to disappear after switching to 32-bit protected mode.
+You may encounter the following error albeit with the address of your code:
 
-For me, breakpoints didn't work. The reason might be that the CPU obviously isn't configured at all upon starting execution at the reset vector...
+> u: error: DBGCCmdHlpVarToDbgfAddr failed on 'f000:0000f562 L 0': VERR_INVALID_SELECTOR
+
+For me, the error didn't seem to harm to the execution flow. It seems to disappear after switching into 32-bit protected mode. Judging from the "u" it is likely just the disassembler which is complaining here.
+
+Furthermore, breakpoints didn't work for me, neither *bp* nor *br*. The reason for that might be that the CPU obviously isn't configured at all upon starting execution at the reset vector...
