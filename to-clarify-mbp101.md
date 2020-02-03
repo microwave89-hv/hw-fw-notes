@@ -165,3 +165,5 @@ Where does the BOOTLOG file in the root dir of the EFI volume stem from? And wha
 A: BOOTLOG appears to be created by the SlingShot service/driver/app, which for me has the GUID D5B366C7-DB85-455F-B50B-900A694E4C8C (kudos to UefiTool_ne authors!). The invocation of the SlingShot image has been correllating to at least the use of the Recovery Mode activated by pressing and holding Cmd + R.
 Sample output might read:
 > SlingShot: Starting Local and Network Diags/Recovery Session at 01/27/2020  18:22.
+
+What is "Merlin" in the Intel Reference Code of the SEC phase?
