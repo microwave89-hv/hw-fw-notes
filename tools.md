@@ -101,7 +101,7 @@ Customize **Storage**
 
 Run the VM to make sure the UEFI Shell does come up properly
 
-Backup the ROM image */Applications/VirtualBox.app/Contents/MacOS/VBoxEFI64.fd* and enter your sudo PW
+Backup the ROM image */Applications/VirtualBox.app/Contents/MacOS/VBoxEFI64.fd*, enter your sudo PW when asked
 
 Overwrite at maximum the last 0x100000 bytes of *VBoxEFI64.fd* with your payload, e.g. with the last 0x100000 bytes of your machine's SPI ROM dump
 
