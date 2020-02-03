@@ -49,6 +49,8 @@ sudo dd if=/dev/pmem of=/Users/micelwhave/0xe0000000.dmp bs=4 skip=$((0xe0000000
 ```
 
 # Quick And Dirty Bare-Metal x86 Emulator
+(This won't do you any good if your code can't cope with its execution starting at 0xfffffff0 in real mode.)
+
 Install VBox 6.0
 
 Create new VM in Expert Mode:
