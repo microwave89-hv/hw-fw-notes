@@ -56,6 +56,7 @@ Create new VM in Expert Mode:
 > *Microsoft Windows*
 
 > *Windows 7 (64-bit)*
+
 > RAM: *4096 MB*
 
 > *Create a virtual hard disk now*
@@ -100,10 +101,25 @@ Customize **Storage**
 
 Run the VM to make sure the UEFI Shell does come up properly
 
-Backup the ROM image */Applications/VirtualBox.app/Contents/MacOS/VBoxEFI64.fd*
+Backup the ROM image */Applications/VirtualBox.app/Contents/MacOS/VBoxEFI64.fd* and enter your sudo PW
 
-Create (empty) Windows 7 x64 VM
+Overwrite at maximum the last 0x100000 bytes of *VBoxEFI64.fd* with your payload, e.g. with the last 0x100000 bytes of your machine's SPI ROM dump
 
-Set DRAM to 4GiB
+Overwrite the first instruction at 0x1ffff0 (later mapped to 0xfffffff0 "Reset Vector") with 0xf4 (that is, halt)
 
-Set V
+If you overwrote an instruction that was multiple bytes long pad the remaining bytes with 0x90
+
+Run the VM you created before by issuing following command:
+
+```
+/Applications/VirtualBox.app/Contents/MacOS/VBoxManage startvm "<your VM>" -E VBOX_GUI_DBG_AUTO_SHOW=true -E VBOX_GUI_DBG_ENABLED=true
+```
+Activate the machine window and goto *Machine* ==> *Pause* which unpauses the VM
+
+In the debugger window write *stop* to halt execution
+
+Now type *t* to step by step follow your code
+
+After your code has started using a GDT you may type *dg* to display it
+
+CAVEAT: You may encounter the error "". For me it didn't seem to do any harm to the execution flow. It used to disappear after switching to 32-bit protected mode.
