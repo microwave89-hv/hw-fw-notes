@@ -48,7 +48,7 @@ CAVEAT: Apparently, reading entire pages from PCI space leads to wrongly dumped 
 sudo dd if=/dev/pmem of=/Users/micelwhave/0xe0000000.dmp bs=4 skip=$((0xe0000000/4)) count=1024
 ```
 
-# Quick And Dirty Bare-metal x86 Emulator
+# Quick And Dirty Bare-Metal x86 Emulator
 Install VBox 6.0
 
 Create new VM in Expert Mode:
@@ -56,7 +56,6 @@ Create new VM in Expert Mode:
 > *Microsoft Windows*
 
 > *Windows 7 (64-bit)*
-
 > RAM: *4096 MB*
 
 > *Create a virtual hard disk now*
