@@ -160,7 +160,7 @@ How do these unfettered readings compare to SW-based dumps?
 Any unexplainable differences that might pinpoint BIOS malware? ;) 
 
 # Various Questions
-Where does the BOOTLOG file in the root dir of the EFI volume stem from? And what is that "SlingShot" which allegedly is logging stuff?
+Where does the BOOTLOG file in the root dir of the EFI volume stem from? And what is that "SlingShot" which allegedly is logging something?
 
 A: BOOTLOG appears to be created by the SlingShot service/driver/app, which for me has the GUID D5B366C7-DB85-455F-B50B-900A694E4C8C (kudos to UefiTool_ne authors!). The invocation of the SlingShot image has been correllating to at least the use of the Recovery Mode activated by pressing and holding Cmd + R.
 Sample output might read:
