@@ -133,3 +133,19 @@ You may encounter the following error albeit with the address of your code:
 For me, the error didn't seem to harm to the execution flow. It seems to disappear after switching into 32-bit protected mode. Judging from the "u" it is likely just the disassembler which is complaining here.
 
 Furthermore, breakpoints didn't work for me, neither *bp* nor *br*. The reason for that might be that the CPU obviously isn't configured at all upon starting execution at the reset vector...
+
+# Skimming ASCII formats like Intel Hex/Motorola Hex/SREC/TBD for strings
+
+In general there are 2 methods:
+1. Q'n'd: (Only for quick overview)
+  * Delete header sums/hash lines
+  * If the file features separate data addresses, such as in an Apple .smc file, find/replace by no data as much of the address and its descriptor as you can such that none of the non-zero digits of the address is deleted *and* no odd number of digits is left in the data line
+  * Then find/replace all line descriptions including their separators by no data
+  * If there are any separators left delete them now
+  * Paste the resulting file, which by now should only contain hex-digits, to a hex viewer
+  * Skim the file for telltale strings
+2. Less q'n'd: (Idea from InversePath researchers in their 2012 talk "" ())
+  * `grep -o -E` blabla TBD
+
+TL;DR: Remove at least all non-hex digits, __but be extremely cautious when using find/replace to remove line descriptions and separators! If you accidentally remove or leave in there any odd number of hex digits (nibbles!) the file may become entirely uninterpretable when viewed in a hex viewer such as Hex Fiend.__
+I.e. all data that follows after the deletion becomes unreadable until the next odd number of nibbles are deleted. Depending on where and how often that happens the resulting file may appear to have "no human-readable strings at all" or just "little human-readable strings".
