@@ -144,8 +144,9 @@ In general there are 2 methods:
   * If there are any separators left delete them now
   * Paste the resulting file, which by now should only contain hex-digits, to a hex viewer
   * Skim the file for telltale strings
-2. Less q'n'd: (Idea from InversePath researchers in their 2012 talk "" ()), with the Apple .smc file as an example
-  * `$ grep -o -e "[A-Fa-f0-9]\{128\}" 2012MBPR15.smc | xxd -r -p > 2012MBPR15be.bin` (aka "find hex digits, and *iff* found 128 consecutives of them that is a match. Then only print the matching part (the 128 consecutive nibbles) and pipe the output into hex dump tool")
+  
+2. Less q'n'd: (Idea from InversePath researchers in their 2012 talk "Practical Exploitation of Embedded Systems" (https://dev.inversepath.com/download/public/embedded_systems_exploitation.pdf)), with the Apple .smc file as an example:
+  * `$ grep -o -e "[A-Fa-f0-9]\{128\}" 2012MBPR15.smc | xxd -r -p > 2012MBPR15be.bin` (aka "find hex digits, and *iff* found 128 consecutive of them that is a match. Then print only the matching part (the 128 consecutive nibbles) and pipe the output into hex dump tool") (Note that this works only if the payload (data) lines are the longest consecutive hex data in that file, such as in an Apple .smc file!)
 
 TL;DR: Remove at least all non-hex digits, __but be extremely cautious when using find/replace to remove line descriptions and separators! If you accidentally remove or leave in there any odd number of hex digits (nibbles!) the file may become entirely uninterpretable when viewed in a hex viewer such as Hex Fiend.__
 I.e. all data that follows after the deletion becomes unreadable until the next odd number of nibbles are deleted. Depending on where and how often that happens the resulting file may appear to have "no human-readable strings at all" or just "little human-readable strings".
