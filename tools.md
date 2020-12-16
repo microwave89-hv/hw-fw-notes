@@ -137,15 +137,15 @@ Furthermore, breakpoints didn't work for me, neither *bp* nor *br*. The reason f
 # Skimming ASCII formats like Intel Hex/Motorola Hex/SREC/TBD for strings
 
 In general there are 2 methods:
-1. Q'n'd: (Only for quick overview)
+1. Q'n'd:
   * Delete header sums/hash lines
   * If the file features separate data addresses, such as in an Apple .smc file, find/replace by no data as much of the address and its descriptor as you can such that none of the non-zero digits of the address is deleted *and* no odd number of digits is left in the data line
   * Then find/replace all line descriptions including their separators by no data
   * If there are any separators left delete them now
   * Paste the resulting file, which by now should only contain hex-digits, to a hex viewer
   * Skim the file for telltale strings
-2. Less q'n'd: (Idea from InversePath researchers in their 2012 talk "" ())
-  * `grep -o -E` blabla TBD
+2. Less q'n'd: (Idea from InversePath researchers in their 2012 talk "" ()), with the Apple .smc file as an example
+  * `$ grep -o -e "[A-Fa-f0-9]\{128\}" 2012MBPR15.smc | xxd -r -p > 2012MBPR15be.bin` (aka "find hex digits, and *iff* found 128 consecutives of them that is a match. Then only print the matching part (the 128 consecutive nibbles) and pipe the output into hex dump tool")
 
 TL;DR: Remove at least all non-hex digits, __but be extremely cautious when using find/replace to remove line descriptions and separators! If you accidentally remove or leave in there any odd number of hex digits (nibbles!) the file may become entirely uninterpretable when viewed in a hex viewer such as Hex Fiend.__
 I.e. all data that follows after the deletion becomes unreadable until the next odd number of nibbles are deleted. Depending on where and how often that happens the resulting file may appear to have "no human-readable strings at all" or just "little human-readable strings".
