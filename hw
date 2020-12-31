@@ -6,6 +6,7 @@ MacBook Pro Retina 15" Mid 2012 (Best configuration):
 A1398:
   - CPU (CPU, NB (MCH & co)): Ivy Bridge (mobile)
   - SB (PCH): Panther Point, QM77 (7 series, C216), w. Management Engine 8
+  - Board-ID = Mac-C3EC7CD22292981F
   
 - Intel(R) DSL3510L Thunderbolt controller?
 - Cypress Semiconductor CY8C24794-24L - a Programmable SoC
