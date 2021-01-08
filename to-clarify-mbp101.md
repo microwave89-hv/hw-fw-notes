@@ -1,9 +1,9 @@
 # IED*, Intel Enhanced Debug, ...
-What is it?
+* What is it?
 
-Why is IEDRAM supposed to be in SMRAM?
+* Why is IEDRAM supposed to be in SMRAM?
 
-When was it introduced?
+* When was it introduced?
 
 Does it have any use nowadays?
 
