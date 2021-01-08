@@ -167,3 +167,6 @@ Sample output might read:
 > SlingShot: Starting Local and Network Diags/Recovery Session at 01/27/2020  18:22.
 
 What is "Merlin" in the Intel(R) Reference Code of the SEC phase?
+
+What is __Firmware.scap__ and why is it that the UefiTool_ne cannot open it properly? Or if it *is* opening this properly, why can't I spot human-readable strings??
+And *why* is __Firmware.scap__ that large, and clearly different from e.g. the MBP101.00F6.B00???
