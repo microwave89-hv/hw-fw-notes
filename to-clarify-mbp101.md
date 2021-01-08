@@ -32,13 +32,13 @@
 # SMI
 * Is the MMU capable of accessing paging structures in SMRAM? While CPU is in SMM?
 
-** A: Broadwell Technology is supposedly capable of this. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, p. 8, p. 12)
+  - A: Broadwell Technology is supposedly capable of this. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, p. 8, p. 12)
 
-Would x86-64 handlers be possible? Do such handlers currently exist in SMRAM?
+* Would x86-64 handlers be possible? Do such handlers currently exist in SMRAM?
 
-Would it be possible for such handlers to access DRAM up to TOM?
+* Would it be possible for such handlers to access DRAM up to TOM?
 
-A: For handlers that employ paging it should be possible.
+  - A: For handlers that employ paging it should be possible.
 
 # SMC
 What is handled in SMC and what in SMM?
