@@ -169,3 +169,5 @@ Sample output might read:
 
 * What is __Firmware.scap__ and why is it that the UefiTool_ne cannot open it properly? Or if it *is* opening this properly, why can't I spot human-readable strings??
 * And *why* is __Firmware.scap__ that large, and clearly different from e.g. the MBP101.00F6.B00???
+
+* Is the Renesas H8/2113 (GMUX chip) programmable from either ME/SMM/SPI ROM/macOS w/o. HW access? If yes, how? Is thery any GMUX FW update??? (This might allow for rapidly strobing the display backlight ;) )
