@@ -175,3 +175,5 @@ Sample output might read:
 * And *why* is __Firmware.scap__ that large, and clearly different from e.g. the MBP101.00F6.B00???
 
 * Is the Renesas H8/2113 (GMUX chip) programmable from either ME/SMM/SPI ROM/macOS w/o HW access? If yes, how? Is there any GMUX FW update??? (Gaining control over the GMUX PC might allow for rapidly strobing the display backlight ;) )
+
+* Is it possible to write NVRAM variables without use of Apple updaters/bless/... ?
