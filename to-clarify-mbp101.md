@@ -5,34 +5,34 @@
 
 * When was it introduced?
 
-Does it have any use nowadays?
+* Does it have any use nowadays?
 
-How does IEDRAM look like?
+* What does this IEDRAM look like?
 
 # DSC Structure
-What is the DSC structure @xoreaxeaxeax was sinkholing?
+* What is the DSC structure @xoreaxeaxeax was sinkholing?
 
-How does it relate to the CPU State Save Map? To the full SMRAM?
+* How does it relate to the CPU State Save Map? To the full SMRAM?
 
-Has it changed over the past few years? How?
+* Has it changed over the past few years? How?
 
-Is it related in any way to EFI_SMRAM_DESCRIPTOR, or EFI_MMRAM_DESCRIPTOR?
+* Is it related in any way to EFI_SMRAM_DESCRIPTOR, or EFI_MMRAM_DESCRIPTOR?
 
 # SMRAM
-How does the entire SMRAM look like?
+* How does the entire SMRAM look like?
 
-If chipsec tells something about CSEG and TSEG being configured properly, are there multiple zones of SMRAM that are equally protected?
+* If chipsec tells something about CSEG and TSEG being configured properly, are there multiple zones of SMRAM that are equally protected?
 
-If TSEG is supposed to be enabled, is TSEG access governed by the same D_XYZ flags that control CSEG access?
+* If TSEG is supposed to be enabled, is TSEG access governed by the same D_XYZ flags that control CSEG access?
 
-If both CSEG and TSEG are enabled are there handlers in both regions?
+* If both CSEG and TSEG are enabled are there handlers in both regions?
 
-How does SMBASE relate to TSEG? To TSEGMB? Is it possible that SMBASE != TSEGMB if TSEG is enabled?
+* How does SMBASE relate to TSEG? To TSEGMB? Is it possible that SMBASE != TSEGMB if TSEG is enabled?
 
 # SMI
-Is the MMU capable of accessing paging structures in SMRAM? While CPU is in SMM?
+* Is the MMU capable of accessing paging structures in SMRAM? While CPU is in SMM?
 
-A: Broadwell Technology is supposedly capable of this. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, p. 8, p. 12)
+** A: Broadwell Technology is supposedly capable of this. (https://web.archive.org/web/20200107052346/https://software.intel.com/sites/default/files/managed/0c/92/STM_User_Guide-001.pdf, p. 8, p. 12)
 
 Would x86-64 handlers be possible? Do such handlers currently exist in SMRAM?
 
