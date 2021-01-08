@@ -85,8 +85,12 @@ It seems that there must exist a page mapping to access it from long mode. In EF
 
 * How dangerous is the GbE FW?
   - A: A first analysis has shown that at least in the MBP101.00F6.B00 there doesn't appear to be GbE FW in the first place. There is however another .scap file, and in different FW updates different FW's may be shipped. Then there's the possibility that the GbE is behaving stateless; i.e. the firmware is only loaded by a GbE driver (kext) and persists until platform reset.
+  
+* Is SMM == -2.5? If not, was it at some point?
 
 * How dangerous is the ME on a MacBook Pro 10,1?
+
+* If PRx registers/regions/whateves have been set, is there any way to make them be not set?
 
 # ME
 * How is MESEG being used?
