@@ -123,7 +123,7 @@ It seems that there must exist a page mapping to access it from long mode. In EF
 * What role do the misconfigured protections on some EFI vars play?
 
 * SMM_BWP does exist on PPT but is not reported to be used. Why hasn't the FW been updated in light of Speed Racer?
-  - A: As mentioned above, PRx registers seem to offer equal protection.
+  - A: As mentioned above, PRx registers seem to offer equal protection. And there is FLOCKDN.
 
 * Why is the ME reported to be in MFG mode?
 
