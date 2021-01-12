@@ -138,6 +138,8 @@ It seems that there must exist a page mapping to access it from long mode. In EF
 
 * Which version of the ACPI Specification is used?
   - A: In the (first) FADT (FACP) referenced from the XSDT there is a "4" at offset 8. So most likely the proper spec is https://uefi.org/sites/default/files/resources/ACPI_4_Errata_A.pdf, or https://uefi.org/sites/default/files/resources/ACPI_4.pdf. What's a little funny though, the "AppleACPIPlatform" kext appears to be derived from at least ACPI 6.0. This would mean the OS driver might demand features which the underlying platform FW doesn't support.
+  
+* __What pitch black sorcery is going on here?? https://www.ch1p.io/coreboot-macbook-internal-flashing/__ !!!!
 
 # SMM Security
 * What was the timeline of attacks, and how were they mitigated?
