@@ -189,3 +189,13 @@ Sample output might read:
 * Is it possible to write NVRAM variables without use of Apple updaters/bless/... ?
 
 * Can we do funny things with that: ```[!] WARNING: Software has write access to GBe region in SPI flash``` (chipsec)
+
+# FLOCKN PRx BRWA BMWAG BLE BIOSWE SMM_BWP .....
+* What is the function of these?
+
+* Which protections MUST be removed to write the SPI flash?
+
+* Are those different level protections, and if so, what levels do they refer to? Which levels do exist in the first place?
+
+# chipsec MBP101.00F6.B00
+* What are the security implications of the multiple chipsec problems?
