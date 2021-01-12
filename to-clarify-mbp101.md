@@ -9,20 +9,22 @@
 
 * What does this IEDRAM look like?
 
-# DSC Structure
+# DSC Structure (sometimes *PSD*)
 * What is the DSC structure @xoreaxeaxeax was sinkholing?
-  - Most probably it refers to the "PROCESSOR_SMM_DESCRIPTOR" structure mentioned in udk and edk2 source code. Find its definition in "" of the udk.
+  - DSC should stand for "PROCESSOR_SMM_DESCRIPTOR", as mentioned in the UDK and edk2 source code.
+    Find the structure definition in "/UefiCpuPkg/PiSmmCpuDxeSmm/PiSmmCpuDxeSmm.h" of the UDK. (At least until 2015 yrs)
   
 * How does it relate to the CPU State Save Map? To the full SMRAM?
-  - It is an addition to the Save State Map. See also the following line in "" of the udk:
+  - It is an addition to the Save State Map. This can be inferred from the following line in "/UefiCpuPkg/PiSmmCpuDxeSmm/PiSmmCpuDxeSmm.c" of the udk:
   '''TileSize = sizeof (SMRAM_SAVE_STATE_MAP) + sizeof (PROCESSOR_SMM_DESCRIPTOR) + GetSmiHandlerSize () - 1;'''
 
 * Has it changed over the past few years? How?
+  - TBD. Btw, there is successor called the *TXT_PROCESSOR_SMM_DESCRIPTOR* in "/MdePkg/Include/Register/Intel/StmApi.h" of the edk2 (At least until 2019 yrs).
 
 * Is it related in any way to EFI_SMRAM_DESCRIPTOR, or EFI_MMRAM_DESCRIPTOR?
   - No, according to my knowledge on 1/13/2021, none of them is related to the DSC structure. See above.
   
-TL;DR: Refer to the 
+TL;DR: Grep for "PROCESSOR_SMM_DESCRIPTOR" in the UDK/EDK2 sources (EDK "1" does not seem to have any code related to that DSC structure).
 
 # SMRAM
 * How does the entire SMRAM look like?
