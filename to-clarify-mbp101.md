@@ -195,6 +195,8 @@ Sample output might read:
 
 * Which protections MUST be removed to write the SPI flash?
 
+* Which can be removed without a processor reset (==> warm boot...)? Without a platform/chipset reset?
+
 * Are those different level protections, and if so, what levels do they refer to? Which levels do exist in the first place?
 
 # chipsec MBP101.00F6.B00
