@@ -11,12 +11,18 @@
 
 # DSC Structure
 * What is the DSC structure @xoreaxeaxeax was sinkholing?
-
+  - Most probably it refers to the "PROCESSOR_SMM_DESCRIPTOR" structure mentioned in udk and edk2 source code. Find its definition in "" of the udk.
+  
 * How does it relate to the CPU State Save Map? To the full SMRAM?
+  - It is an addition to the Save State Map. See also the following line in "" of the udk:
+  '''TileSize = sizeof (SMRAM_SAVE_STATE_MAP) + sizeof (PROCESSOR_SMM_DESCRIPTOR) + GetSmiHandlerSize () - 1;'''
 
 * Has it changed over the past few years? How?
 
 * Is it related in any way to EFI_SMRAM_DESCRIPTOR, or EFI_MMRAM_DESCRIPTOR?
+  - No, according to my knowledge on 1/13/2021, none of them is related to the DSC structure. See above.
+  
+TL;DR: Refer to the 
 
 # SMRAM
 * How does the entire SMRAM look like?
