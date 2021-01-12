@@ -16,7 +16,9 @@
   
 * How does it relate to the CPU State Save Map? To the full SMRAM?
   - It is an addition to the Save State Map. This can be inferred from the following line in "/UefiCpuPkg/PiSmmCpuDxeSmm/PiSmmCpuDxeSmm.c" of the udk:
-  '''TileSize = sizeof (SMRAM_SAVE_STATE_MAP) + sizeof (PROCESSOR_SMM_DESCRIPTOR) + GetSmiHandlerSize () - 1;'''
+  '''
+  TileSize = sizeof (SMRAM_SAVE_STATE_MAP) + sizeof (PROCESSOR_SMM_DESCRIPTOR) + GetSmiHandlerSize () - 1;
+  '''
 
 * Has it changed over the past few years? How?
   - TBD. Btw, there is successor called the *TXT_PROCESSOR_SMM_DESCRIPTOR* in "/MdePkg/Include/Register/Intel/StmApi.h" of the edk2 (At least until 2019 yrs).
