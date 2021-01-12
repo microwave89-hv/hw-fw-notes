@@ -21,7 +21,7 @@
   
 
 * Has it changed over the past few years? How?
-  - TBD. Btw, there is successor called the *TXT_PROCESSOR_SMM_DESCRIPTOR* in "/MdePkg/Include/Register/Intel/StmApi.h" of the edk2 (At least until 2019 yrs).
+  - TBD. Btw, there is successor called the *TXT_PROCESSOR_SMM_DESCRIPTOR* in "/MdePkg/Include/Register/Intel/StmApi.h" of the edk2 (At least until 2019 yrs). Coincidentally, it also gives an actual name to a lot more structure fields than the original PROCESSOR_SMM_DESCRIPTOR does.
 
 * Is it related in any way to EFI_SMRAM_DESCRIPTOR, or EFI_MMRAM_DESCRIPTOR?
   - No, according to my knowledge on 1/13/2021, none of them is related to the DSC structure. See above.
