@@ -187,3 +187,5 @@ Sample output might read:
 * Is the Renesas H8/2113 (GMUX chip) programmable from either ME/SMM/SPI ROM/macOS w/o HW access? If yes, how? Is there any GMUX FW update??? (Gaining control over the GMUX PC might allow for rapidly strobing the display backlight ;) )
 
 * Is it possible to write NVRAM variables without use of Apple updaters/bless/... ?
+
+* Can we do funny things with that: ```[!] WARNING: Software has write access to GBe region in SPI flash``` (chipsec)
