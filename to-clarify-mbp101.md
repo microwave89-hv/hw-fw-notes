@@ -203,3 +203,4 @@ Sample output might read:
 
 # chipsec MBP101.00F6.B00
 * What are the security implications of the multiple chipsec problems?
+  - Culminates in SPI flash being overwritable without an external programmer, see "Current FW MBP101.00F6.B00"
