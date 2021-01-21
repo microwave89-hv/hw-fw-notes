@@ -155,7 +155,7 @@ I.e. all data that follows after the deletion becomes unreadable until the next 
 
   * Arch: i386
   * Base Address: (some address that makes sense)
-  * Mode: i8086 (!)
+  * Mode: i8086 or i386 (Doesn't seem to have any effect?)
   * Address Size: addr16
   * Data Size: data16
   
