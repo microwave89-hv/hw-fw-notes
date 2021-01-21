@@ -150,3 +150,38 @@ In general there are 2 methods:
 
 TL;DR: Remove at least all non-hex digits, __but be extremely cautious when using find/replace to remove line descriptions and separators! If you accidentally remove or leave in there any odd number of hex digits (nibbles!) the file may become entirely uninterpretable when viewed in a hex viewer such as Hex Fiend.__
 I.e. all data that follows after the deletion becomes unreadable until the next odd number of nibbles are deleted. Depending on where and how often that happens the resulting file may appear to have "no human-readable strings at all" or just "little human-readable strings".
+
+# How disassemble.io Intel unreal ("reset vector") mode
+
+  * i386
+  * (some address that makes sense)
+  * i8086
+  * addr16
+  * data16
+  
+  Disasm verification: ```DB E3 0F 6E C0 66 31 C0 8E C0 8C C8 8E D8 B8 00 F0 8E C0 67 26 A0 F0 FF 00 00 3C EA 75 0F B9 1B 00 0F 32 F6 C4 01 74 41 EA F0 FF 00 F0 B0 01 E6 80 66 BE 8C FD FF FF 66 2E 0F 01 14 0F 20 C0``` loaded@0xfffff51c
+  =
+  ```
+  fffff51c db e3                            fninit 
+  fffff51e 0f 6e c0                         movd   mm0,eax
+  fffff521 66 31 c0                         xor    eax,eax
+  fffff524 8e c0                            mov    es,ax
+  fffff526 8c c8                            mov    ax,cs
+  fffff528 8e d8                            mov    ds,ax
+  fffff52a b8 00 f0                         mov    ax,0xf000
+  fffff52d 8e c0                            mov    es,ax
+  fffff52f 67 26 a0 f0 ff 00 00             addr32 mov al,es:0xfff0
+  fffff536 3c ea                            cmp    al,0xea
+  fffff538 75 0f                            jne    0xfffff549
+  fffff53a b9 1b 00                         mov    cx,0x1b
+  fffff53d 0f 32                            rdmsr  
+  fffff53f f6 c4 01                         test   ah,0x1
+  fffff542 74 41                            je     0xfffff585
+  fffff544 ea f0 ff 00 f0                   jmp    0xf000:0xfff0
+  fffff549 b0 01                            mov    al,0x1
+  fffff54b e6 80                            out    0x80,al
+  fffff54d 66 be 8c fd ff ff                mov    esi,0xfffffd8c
+  fffff553 66 2e 0f 01 14                   lgdtd  cs:[si]
+  fffff558 0f 20 c0                         mov    eax,cr0
+  ```
+  
