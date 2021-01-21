@@ -153,14 +153,17 @@ I.e. all data that follows after the deletion becomes unreadable until the next 
 
 # How disassemble.io Intel unreal ("reset vector") mode
 
-  * i386
-  * (some address that makes sense)
-  * i8086
-  * addr16
-  * data16
+  * Arch: i386
+  * Base Address: (some address that makes sense)
+  * Mode: i8086 (!)
+  * Address Size: addr16
+  * Data Size: data16
   
-  Disasm verification: ```DB E3 0F 6E C0 66 31 C0 8E C0 8C C8 8E D8 B8 00 F0 8E C0 67 26 A0 F0 FF 00 00 3C EA 75 0F B9 1B 00 0F 32 F6 C4 01 74 41 EA F0 FF 00 F0 B0 01 E6 80 66 BE 8C FD FF FF 66 2E 0F 01 14 0F 20 C0``` loaded@0xfffff51c
-  =
+  Disasm verification: 
+  ```
+  DB E3 0F 6E C0 66 31 C0 8E C0 8C C8 8E D8 B8 00 F0 8E C0 67 26 A0 F0 FF 00 00 3C EA 75 0F B9 1B 00 0F 32 F6 C4 01 74 41 EA F0 FF 00 F0 B0 01 E6 80 66 BE 8C FD FF FF 66 2E 0F 01 14 0F 20 C0
+  ``` 
+  loaded @ 0xfffff51c =
   ```
   fffff51c db e3                            fninit 
   fffff51e 0f 6e c0                         movd   mm0,eax
