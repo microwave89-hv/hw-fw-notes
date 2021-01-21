@@ -151,7 +151,7 @@ In general there are 2 methods:
 TL;DR: Remove at least all non-hex digits, __but be extremely cautious when using find/replace to remove line descriptions and separators! If you accidentally remove or leave in there any odd number of hex digits (nibbles!) the file may become entirely uninterpretable when viewed in a hex viewer such as Hex Fiend.__
 I.e. all data that follows after the deletion becomes unreadable until the next odd number of nibbles are deleted. Depending on where and how often that happens the resulting file may appear to have "no human-readable strings at all" or just "little human-readable strings".
 
-# How disassemble.io Intel unreal ("reset vector") mode
+# How disassemble.io in Intel unreal mode (reset vector & co.)
 
   * Arch: i386
   * Base Address: (some address that makes sense)
