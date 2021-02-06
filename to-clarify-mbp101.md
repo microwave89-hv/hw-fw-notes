@@ -182,6 +182,7 @@ Where in the SPI ROM dump is GbE FW? ME FW? BIOS + reset vector?
   * 1d000 to 1d0a0
   * 1f0d0 to 31a20
   * NVRAM region
+  
   Those differences haven't been explained yet.
   
 # Various Questions
