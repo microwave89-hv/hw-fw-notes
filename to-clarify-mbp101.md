@@ -172,9 +172,18 @@ Where in the SPI ROM dump is GbE FW? ME FW? BIOS + reset vector?
 
 # Reproducibility of HW-based SPI ROM Readings
 * How do these unfettered readings compare to SW-based dumps?
-
+  - A: (From a MacBookPro11,3 perspective) At least between 2 different types of boot, namely the S3 sleep and a cold boot, the variable region from roughly 610000 to 632000 changes. Multiple SW-based reads have yet to be performed.
+  
 * Any unexplainable differences that might pinpoint BIOS malware? ;) 
-
+  - A: (From a MacBookPro11,3 perspective) Comparing reads that are HW based against a SW-based one there are obviously differences in the variable region however, there appear to be differences in the EFFS part (?) of the ME region, too. The dumps differ at:
+  * 5530 to 5a80
+  * 15020 to 15080
+  * 19010 to 19080
+  * 1d000 to 1d0a0
+  * 1f0d0 to 31a20
+  * NVRAM region
+  Those differences haven't been explained yet.
+  
 # Various Questions
 * Where does the BOOTLOG file in the root dir of the EFI volume stem from? And what is that "SlingShot" which allegedly is logging something?
   - A: BOOTLOG appears to be created by the SlingShot service/driver/app, which for me has the GUID D5B366C7-DB85-455F-B50B-900A694E4C8C (kudos to UefiTool_ne authors!). The invocation of the SlingShot image has been correllating to at least the use of the Recovery Mode activated by pressing and holding Cmd + R.
