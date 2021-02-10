@@ -147,6 +147,7 @@ It seems that there must exist a page mapping to access it from long mode. In EF
 * Boot Guard? PFAT? STM? TXT? Bios Guard?
 
 * What is even the difference between *Boot Guard* and *Bios Guard*?
+  - A: Neither of them has actually to do with SMM though at least the latter appears to be initiated in SMM context. The difference between those is whether unauthorized code can be written but isn't executed (https://downloads.dell.com/solutions/servers-solution-resources/Direct%20from%20Development%20-%20Cyber-Resiliency%20In%20Chipset%20and%20BIOS.pdf) or isn't even written (https://airbus-seclab.github.io/embedded_controller/BH2019-Slides-Breaking_Through_Another_Side_Bypassing_Firmware_Security_Boundaries_from_Embedded_Controller-matrosov-gazet.pdf) in the SPI flash in the first place.
 
 # FW Structures
 * What does the EFI CAPSULE "MBP101_00F6_B00.scap" consist of?
