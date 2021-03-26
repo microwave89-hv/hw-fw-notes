@@ -1,6 +1,7 @@
 When working on *nix:
 - Unpack PKG in PKG (nested PKG): pkgutil --expand-full
 - Find recursively in files: grep -r "PeiMain" .
+- Find recursively in certain filetype only: grep -ir --include="*.asm" "fninit" .
 - Mass download pages: wget --recursive --no-parent <url>
 
 Online Disassemble unreal mode:
