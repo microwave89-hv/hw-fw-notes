@@ -193,7 +193,7 @@ I.e. all data that follows after the deletion becomes unreadable until the next 
 1. Find raw ROM info
   * Open Utilities --> Terminal
   * ```# - ioreg -b -i -l -p IODeviceTree | grep -i rom```
-  * Cmd+c to save the hex string after "apple-rom-info"
+  * Cmd+c to temporarily save the hex string after "apple-rom-info"
 2. Interpret hex string as chars
-  * ```# echo <hex string in quotes> | sed 's/\(..\)/\\x\1/g' | while IFS= read -r hex; do printf "%b" "$hex"; done
+  * ```# echo <hex string in quotes> | sed 's/\(..\)/\\x\1/g' | while IFS= read -r hex; do printf "%b" "$hex"; done```
  
