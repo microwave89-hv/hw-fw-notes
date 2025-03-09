@@ -187,4 +187,13 @@ I.e. all data that follows after the deletion becomes unreadable until the next 
   fffff553 66 2e 0f 01 14                   lgdtd  cs:[si]
   fffff558 0f 20 c0                         mov    eax,cr0
   ```
-  
+# Find EFI ROM version from macOS Recovery
+(There you neither have eficheck, nor system_profiler, nor System Information, nor sys_diagnose, nor xargs, nor xxd, nor hexdump...)
+
+1. Find raw ROM info
+  * Open Utilities --> Terminal
+  * ```# - ioreg -b -i -l -p IODeviceTree | grep -i rom```
+  * Cmd+c to save the hex string after "apple-rom-info"
+2. Interpret hex string as chars
+  * ```# echo <hex string in quotes> | sed 's/\(..\)/\\x\1/g' | while IFS= read -r hex; do printf "%b" "$hex"; done
+ 
